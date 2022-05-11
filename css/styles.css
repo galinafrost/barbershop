@@ -1,0 +1,301 @@
+:root {
+  /* шрифты */
+  --main-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+
+  /* цвет текста */
+  --main-txt-cl: #555555;
+  --title-main-cl: #303030;
+  --title-secondary-cl: #ffffff;
+  --secondary-txt-cl: #9da4bd;
+  --accent-cl: #ff6c00;
+
+  /* другие цвета */
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 0.02em;
+
+  color: var(--main-txt-cl);
+  background-color: #fff;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+address {
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* text colors */
+
+.text-grey {
+  color: var(--secondary-txt-cl);
+}
+
+/* Общее */
+
+.upper-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+
+  color: var(--title-main-cl);
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-cl);
+}
+
+/* Хедер */
+
+.nav-items {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.header-nav-link {
+  color: var(--title-secondary-cl);
+}
+
+.header-tel {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--title-secondary-cl);
+}
+
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-cl);
+}
+
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: var(--accent-cl);
+}
+
+/* Герой */
+
+.hero-social-link {
+    font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+
+  color: var(--title-main-cl);
+}
+
+.hero-social-link:hover,
+.hero-social-link:focus {
+  color: var(--accent-cl);
+}
+
+.hero-title {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: var(--title-secondary-cl);
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.66;
+  letter-spacing: 0.02em;
+}
+
+/* Секция About Us */
+
+.about-us-post {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+.about-us .btn {
+  color: #303030;
+}
+
+/* Секция Skils */
+
+.skils-number {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.35;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+.skils-number-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  color: #303030;
+}
+
+/* Секция Teams */
+
+.teams {
+  background-color: #f7f7f7;
+}
+
+.teams-name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.38;
+  letter-spacing: 0.02em;
+
+  color: #303030;
+}
+
+.teams-position {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+
+  color: #ff6c00;
+}
+
+/* Секция Form */
+
+.form {
+  background-color: #191c26;
+}
+
+.form .title {
+  color: #f7f7f7;
+}
+
+.form label,
+.form textarea {
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+}
+
+/* Секция Contact */
+
+.contact .title {
+  color: #f7f7f7;
+}
+
+.contact-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-cl);
+}
+
+.contact-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.contact-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: #9da4bd;
+}
+
+/* Секция Footer */
+
+.footer-txt {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #9da4bd;
+}
+
+.footer-social-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  color: var(--accent-cl);
+}
