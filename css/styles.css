@@ -10,7 +10,8 @@
   --secondary-txt-cl: #9da4bd;
   --accent-cl: #ff6c00;
 
-  /* другие цвета */
+  /* отступы */
+  --tipical-margin: 20px;
 }
 
 body {
@@ -22,6 +23,18 @@ body {
   color: var(--main-txt-cl);
   background-color: #fff;
 }
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+
+/* section {
+  border: 1px solid;
+} */
 
 ul,
 ol {
@@ -63,6 +76,8 @@ img {
   line-height: 1.36;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+
+  margin-bottom: var(--tipical-margin);
 }
 
 .title {
@@ -73,6 +88,7 @@ img {
   letter-spacing: 0.05em;
 
   color: var(--title-main-cl);
+  margin-bottom: var(--tipical-margin);
 }
 
 .btn {
@@ -86,6 +102,8 @@ img {
   color: #ffffff;
 
   cursor: pointer;
+
+  display: block;
 }
 
 .btn:hover,
@@ -93,7 +111,13 @@ img {
   background-color: var(--accent-cl);
 }
 
-/* Хедер */
+/* ==================Хедер================== */
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: grey;
+}
 
 .nav-items {
   font-family: inherit;
@@ -127,10 +151,10 @@ img {
   color: var(--accent-cl);
 }
 
-/* Герой */
+/* ================Герой============================ */
 
 .hero-social-link {
-    font-weight: 600;
+  font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.02em;
@@ -143,6 +167,11 @@ img {
   color: var(--accent-cl);
 }
 
+.hero-content {
+  background-color: grey;
+  padding: 272px 0 206px 96px;
+}
+
 .hero-title {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -151,29 +180,96 @@ img {
   letter-spacing: 0.05em;
 
   color: var(--title-secondary-cl);
+  margin-bottom: var(--tipical-margin);
 }
 
 .hero-text {
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.66;
   letter-spacing: 0.02em;
+
+  max-width: 400px;
 }
 
-/* Секция About Us */
+/* =================Секция About Us============= */
+
+.about-us {
+  padding-top: 139px;
+  padding-bottom: 92px;
+}
+
+.about-after-title {
+  margin-bottom: var(--tipical-margin);
+}
 
 .about-us-post {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
+  margin-bottom: 40px;
 }
 
 .about-us .btn {
   color: #303030;
 }
 
-/* Секция Skils */
+/* ================PPRISE================= */
+
+.price {
+  background-color: grey;
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
+
+.price .upper-title {
+  color: rgba(196, 196, 196, 1);
+}
+
+.price .title {
+  color: var(--title-secondary-cl);
+  margin-bottom: 44px;
+}
+
+.prise-sale {
+  margin-bottom: 50px;
+}
+
+.price-list {
+  padding: 30px 40px;
+  border: 1px solid red;
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: var(--tipical-margin);
+}
+
+.price-after-title {
+  color: var(--secondary-txt-cl);
+}
+
+.price .btn {
+  margin: 0 auto;
+}
+
+/* =================Секция Skils================== */
+
+.skils {
+  padding-top: 143px;
+  padding-bottom: 137px;
+}
+
+.skils-item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
+  background: #F7F7F7;
+
+  border: 1px solid red;
+
+  display: block;
+  text-align: center;
+}
 
 .skils-number {
   font-weight: 700;
@@ -192,10 +288,21 @@ img {
   color: #303030;
 }
 
-/* Секция Teams */
+/* ============Секция Teams============== */
 
 .teams {
   background-color: #f7f7f7;
+
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.teams .title {
+  margin-bottom: 44px;
+}
+
+.teams-img {
+  margin-bottom: 30px;
 }
 
 .teams-name {
@@ -205,6 +312,8 @@ img {
   letter-spacing: 0.02em;
 
   color: #303030;
+
+  margin-bottom: 8px;
 }
 
 .teams-position {
@@ -214,20 +323,41 @@ img {
   letter-spacing: 0.02em;
 
   color: #ff6c00;
+
 }
 
-/* Секция Form */
+/*================ Секция Gallery=============*/
+
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.gallery .upper-title {
+  margin-bottom: 44px;
+}
+
+/*==================== Секция Form================ */
 
 .form {
   background-color: #191c26;
+
+  padding-bottom: 130px;
+  padding-top: 193px;
 }
 
 .form .title {
   color: #f7f7f7;
+
+  margin-bottom: 44px;
+}
+
+.form-brim {
+  margin-bottom: 44px;
 }
 
 .form label,
-.form textarea {
+.form-textarea {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
@@ -236,10 +366,31 @@ img {
   color: rgba(157, 164, 189, 0.4);
 }
 
-/* Секция Contact */
+.form-textarea {
+  margin-bottom: 44px;
+}
+
+/*==================== Секция Contact ===============*/
+
+.contact {
+background: grey;
+
+  margin-top: 130px;
+  margin-bottom: 130px;
+}
 
 .contact .title {
   color: #f7f7f7;
+
+  margin-bottom: 40px;
+}
+
+.contact-list {
+  margin-bottom: 70px;
+}
+
+.contact-item:not(:last-child) {
+  margin-bottom: var(--tipical-margin);
 }
 
 .contact-link {
@@ -264,6 +415,8 @@ img {
   text-transform: uppercase;
 
   color: #ffffff;
+
+  margin-bottom: var(--tipical-margin);
 }
 
 .contact-text {
@@ -275,7 +428,11 @@ img {
   color: #9da4bd;
 }
 
-/* Секция Footer */
+/*=============== Секция Footer============== */
+.footer {
+padding-top: 57px;
+padding-bottom: 55px;
+}
 
 .footer-txt {
   font-weight: 600;
