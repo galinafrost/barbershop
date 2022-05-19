@@ -45,7 +45,7 @@
         </nav>
         <div class="header-contact">
           <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn" type="button">онлайн-запись</button>
+          <button class="btn" type="button" data-modal-open>онлайн-запись</button>
         </div>
       </div>
     </header>
@@ -55,12 +55,12 @@
         <div class="container hero-main-content">
           <div class="hero-social">
             <ul class="hero-list">
-              <li>
+              <li class="hero-item">
                 <a class="hero-social-link" href="" target="_blank"
                   >Instagram</a
                 >
               </li>
-              <li>
+              <li class="hero-item">
                 <a class="hero-social-link" href="" target="_blank">Youtube</a>
               </li>
             </ul>
@@ -110,7 +110,7 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="btn" type="button">онлайн-запись</button>
+            <button class="btn" type="button" data-modal-open>онлайн-запись</button>
           </div>
         </div>
       </section>
@@ -157,34 +157,36 @@
               </li>
             </ul>
           </div>
-          <button class="btn" type="button">онлайн-запись</button>
+          <button class="btn" type="button" data-modal-open>онлайн-запись</button>
         </div>
       </section>
       <!-- Секция Skils -->
       <section class="skils">
         <div class="container skils-content">
-          <ul>
-            <li class="skils-item">
-              <p class="skils-number">600</p>
-              <p class="skils-number-text">Довольных клиентов в день</p>
-            </li>
-            <li class="skils-item">
-              <p class="skils-number">50</p>
-              <p class="skils-number-text">Наград за отличный сервис</p>
-            </li>
-            <li class="skils-item">
-              <p class="skils-number">20</p>
-              <p class="skils-number-text">Лучших мастеров Киева</p>
-            </li>
-            <li class="skils-item">
-              <p class="skils-number">100</p>
-              <p class="skils-number-text">Подарков постоянным клиентам</p>
-            </li>
-          </ul>
-          <div>
+          <div class="skils-blok">
+            <ul class="skils-list">
+              <li class="skils-item">
+                <p class="skils-number">600</p>
+                <p class="skils-number-text">Довольных клиентов в день</p>
+              </li>
+              <li class="skils-item">
+                <p class="skils-number">50</p>
+                <p class="skils-number-text">Наград за отличный сервис</p>
+              </li>
+              <li class="skils-item">
+                <p class="skils-number">20</p>
+                <p class="skils-number-text">Лучших мастеров Киева</p>
+              </li>
+              <li class="skils-item">
+                <p class="skils-number">100</p>
+                <p class="skils-number-text">Подарков постоянным клиентам</p>
+              </li>
+            </ul>
+          </div>
+          <div class="skils-text">
             <p class="upper-title">старая традиционная школа</p>
             <h2 class="title">Почему приходят именно к нам?</h2>
-            <p>
+            <p class="after-title">
               О нас говорят только хорошее. Но лучше 1 раз увидеть и
               прочувствовать, чем 10 раз прочитать.
             </p>
@@ -392,17 +394,26 @@
           <ul class="contact-list">
             <li class="contact-item">
               <address>
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./imges/icons.svg#icon-map-pin"></use>
+                </svg>
                 <a class="contact-link" href=""
                   >ул. Васильковая, 7А Киев, 08132</a
                 >
               </address>
             </li>
             <li class="contact-item">
+              <svg class="contacts-icon" width="24" height="24">
+                <use href="./imges/icons.svg#icon-Shape"></use>
+              </svg>
               <a class="contact-link" href="tel:+380441111111"
                 >+38 044 111 11 11</a
               >
             </li>
             <li class="contact-item">
+              <svg class="contacts-icon" width="24" height="24">
+                <use href="./imges/icons.svg#icon-mail"></use>
+              </svg>
               <a class="contact-link" href="mailto:barbershop@email.com"
                 >barbershop@email.com</a
               >
@@ -431,5 +442,15 @@
         </div>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-modal" data-modal-close>
+          <svg class="btn-modal-icon" width="20" height="20">
+            <use href="./imges/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
