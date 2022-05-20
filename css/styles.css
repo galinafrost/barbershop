@@ -116,6 +116,8 @@ margin-right: 20px;
   border-radius: 25px;
 
   cursor: pointer;
+
+  transition: background-color 250ms linear;
 }
 
 .btn:hover,
@@ -133,6 +135,8 @@ margin-right: 20px;
   width: 100%;
   height: 100%;
 
+  opacity: 1;
+  transition: opacity 250ms linear;
 }
 
 .backdrop.is-hidden {
@@ -140,17 +144,23 @@ margin-right: 20px;
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 600px;
   height: 600px;
   padding: 15px;
 
   background-color: #fff;
+
+  transition: transform 250ms linear;
 }
 
 /* ==================Хедер================== */
@@ -187,6 +197,8 @@ margin-right: 20px;
 
 .header-nav-link {
   color: var(--title-secondary-cl);
+
+  transition: color 250ms linear;
 }
 
 .header-contact {
@@ -207,6 +219,8 @@ margin-right: 20px;
   letter-spacing: 0.1em;
 
   color: var(--title-secondary-cl);
+
+  transition: color 250ms linear;
 }
 
 .header-tel:hover,
@@ -256,6 +270,8 @@ margin-right: 40px;
   letter-spacing: 0.2em;
 
   color: var(--title-main-cl);
+
+  transition: color 250ms linear;
 }
 
 .hero-item:not(:last-child) {
@@ -503,6 +519,13 @@ margin-right: 40px;
 
 .teams-img {
   margin-bottom: 30px;
+  transform: scaleX(1) scaleY(1);
+
+  transition: transform 250ms linear;
+}
+
+.teams-img:hover {
+  transform: scaleX(1.1) scaleY(1.1)
 }
 
 .teams-name {
@@ -538,6 +561,12 @@ margin-right: 40px;
   height: 44px;
   background-color: #ffffff;
   border-radius: 50%;
+}
+
+.teams-soc-icon {
+  fill: #303030;
+
+  transition: fill 250ms linear;
 }
 
 .teams-soc-item:hover .teams-soc-icon {
@@ -651,15 +680,14 @@ margin-right: 40px;
   letter-spacing: 0.02em;
 
   color: #9da4bd;
-}
 
-/* .contact-item:hover,
-.ccontact-item:focus {
-  color: var(--accent-cl);
-} */
+  transition: color 250ms linear;
+}
 
 .contacts-icon {
   color: #9da4bd;
+
+  transition: color 250ms linear;
 }
 
 .contact-item:hover .contacts-icon {
@@ -728,6 +756,8 @@ margin-right: 40px;
   letter-spacing: 0.2em;
 
   color: #303030;
+
+  transition: color 250ms linear;
 }
 
 .footer-social-link:hover,
