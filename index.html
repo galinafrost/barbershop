@@ -45,7 +45,9 @@
         </nav>
         <div class="header-contact">
           <a class="header-tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn" type="button" data-modal-open>онлайн-запись</button>
+          <button class="btn" type="button" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
@@ -110,7 +112,9 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="btn" type="button" data-modal-open>онлайн-запись</button>
+            <button class="btn" type="button" data-modal-open>
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -157,7 +161,9 @@
               </li>
             </ul>
           </div>
-          <button class="btn" type="button" data-modal-open>онлайн-запись</button>
+          <button class="btn" type="button" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </section>
       <!-- Секция Skils -->
@@ -366,63 +372,80 @@
           </ul>
         </div>
       </section>
-      <!-- Секция Form -->
-      <!-- <section class="form">
+      <!-- Секция Cонтакты -->
+      <div class="container-wrap">
         <div class="container">
-          <form action="">
+          <section class="form">
             <h2 class="title">Онлайн-запись</h2>
-            <div class="form-brim">
-              <input type="text" id="name" />
-              <label for="name">Имя*</label>
-              <input type="tel" id="phone" />
-              <label for="phone">Телефон*</label>
-            </div>
-            <textarea
-              class="form-textarea"
-              name="message"
-              cols="30"
-              placeholder="сообщение"
-            ></textarea>
-            <button class="btn" type="submit">отправить</button>
-          </form>
-        </div>
-      </section> -->
-      <!-- Секция Contact -->
-      <section class="contact">
-        <div class="container">
-          <h2 class="title">Контакты</h2>
-          <ul class="contact-list">
-            <li class="contact-item">
-              <address>
+            <form action="">
+              <div class="form-brim">
+                <div class="form-name">
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    required
+                    placeholder=" "
+                  />
+                  <label class="form-label" for="name">Имя*</label>
+                </div>
+                <div class="form-name">
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="phone"
+                    required
+                    placeholder=" "
+                  />
+                  <label class="form-label" for="phone">Телефон*</label>
+                </div>
+              </div>
+              <textarea
+                class="form-textarea"
+                name="message"
+                cols="30"
+                placeholder="сообщение"
+              ></textarea>
+              <button class="btn" type="submit">отправить</button>
+            </form>
+          </section>
+
+          <!-- Секция Contact -->
+          <section class="contact">
+            <h2 class="title">Контакты</h2>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <address>
+                  <svg class="contacts-icon" width="24" height="24">
+                    <use href="./imges/icons.svg#icon-map-pin"></use>
+                  </svg>
+                  <a class="contact-link" href=""
+                    >ул. Васильковая, 7А Киев, 08132</a
+                  >
+                </address>
+              </li>
+              <li class="contact-item">
                 <svg class="contacts-icon" width="24" height="24">
-                  <use href="./imges/icons.svg#icon-map-pin"></use>
+                  <use href="./imges/icons.svg#icon-Shape"></use>
                 </svg>
-                <a class="contact-link" href=""
-                  >ул. Васильковая, 7А Киев, 08132</a
+                <a class="contact-link" href="tel:+380441111111"
+                  >+38 044 111 11 11</a
                 >
-              </address>
-            </li>
-            <li class="contact-item">
-              <svg class="contacts-icon" width="24" height="24">
-                <use href="./imges/icons.svg#icon-Shape"></use>
-              </svg>
-              <a class="contact-link" href="tel:+380441111111"
-                >+38 044 111 11 11</a
-              >
-            </li>
-            <li class="contact-item">
-              <svg class="contacts-icon" width="24" height="24">
-                <use href="./imges/icons.svg#icon-mail"></use>
-              </svg>
-              <a class="contact-link" href="mailto:barbershop@email.com"
-                >barbershop@email.com</a
-              >
-            </li>
-          </ul>
-          <h3 class="contact-title">время работы</h3>
-          <p class="contact-text">Ежедневно с 9:00 до 22:00</p>
+              </li>
+              <li class="contact-item">
+                <svg class="contacts-icon" width="24" height="24">
+                  <use href="./imges/icons.svg#icon-mail"></use>
+                </svg>
+                <a class="contact-link" href="mailto:barbershop@email.com"
+                  >barbershop@email.com</a
+                >
+              </li>
+            </ul>
+            <h3 class="contact-title">время работы</h3>
+            <p class="contact-text">Ежедневно с 9:00 до 22:00</p>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
     <!-- Секция Footer -->
     <footer>
@@ -445,10 +468,30 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-modal" data-modal-close>
-          <svg class="btn-modal-icon" width="20" height="20">
-            <use href="./imges/icons.svg#icon-cross"></use>
+          <svg class="btn-modal-icon" width="15" height="15">
+            <use href="./imges/icons.svg#icon-vector"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form" action="">
+          <div class="modal-form-field">
+          <label for="modal-name">Имя</label>
+          <input class="modal-form-input" type="text" name="" id="modal-name" required/>
+        </div>
+        <div class="modal-form-field">
+          <label for="modal-tel">Телефон</label>
+          <input class="modal-form-input" type="tel" name="" id="modal-tel" required/>
+        </div>
+        <div class="modal-form-field">
+          <label for="modal-mail">Почта</label>
+          <input class="modal-form-input" type="email" name="" id="modal-mail" required/>
+        </div>
+        <div class="modal-form-comment">
+          <label for="modal-comment">Комментарий</label>
+          <textarea name="message" cols="30"  id="modal-comment"></textarea>
+        </div>
+          <button class="btn btn-form" type="submit" >отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
