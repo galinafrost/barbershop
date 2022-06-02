@@ -1,0 +1,71 @@
+.skils {
+  padding-top: 143px;
+  padding-bottom: 137px;
+
+  &__content {
+    width: calc(50% - 15px);
+    padding-top: 9px;
+  }
+}
+
+.skils-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skils-blok {
+  width: calc(50% - 15px);
+  display: flex;
+  justify-content: center;
+}
+
+.skils-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+
+  &__item:nth-child(2n) {
+    margin-top: 30px;
+  }
+
+  &__item:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    text-align: center;
+
+    width: 170px;
+    height: 133px;
+    padding: 20px 24px;
+    background: #f7f7f7;
+  }
+
+  &__number {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.35;
+    letter-spacing: 0.05em;
+
+    color: #303030;
+  }
+
+  &__number-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+
+    color: #303030;
+  }
+
+  &__number::after {
+    position: absolute;
+    content: "+";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: $accent-cl;
+  }
+}

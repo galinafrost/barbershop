@@ -1,0 +1,43 @@
+.footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__txt {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: #9da4bd;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 40px;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    color: #303030;
+
+    transition: color 250ms linear;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-cl;
+  }
+}

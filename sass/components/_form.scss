@@ -1,0 +1,110 @@
+.container-wrap {
+  background-color: #191c26;
+
+  background-image: url(../imges/contact-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+
+  &__containt {
+    display: flex;
+  }
+}
+
+.form {
+  width: calc(50% + 15px);
+
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-right: 40px;
+
+  &__title {
+    color: #f7f7f7;
+
+    margin-bottom: 44px;
+  }
+
+  &__brim {
+    display: flex;
+    margin-bottom: 44px;
+  }
+
+  &__name {
+    position: relative;
+  }
+
+  &__input {
+    width: 270px;
+    height: 24px;
+    padding-bottom: 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+    font-size: 13px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    color: $title-secondary-cl;
+
+    transition: border-bottom 250ms linear;
+  }
+
+  &__input:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__input:hover,
+  &__input:focus,
+  &__textarea:hover,
+  &__textarea:focus {
+    border-bottom: 1px solid $title-secondary-cl;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 50%) scale(1);
+
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(157, 164, 189, 0.4);
+    transition: transform 250ms linear;
+  }
+
+  &__input:focus + &__label,
+  &__input:not(:placeholder-shown) + %__label {
+    transform: translate(0, -10px) scale(1);
+  }
+
+  &__textarea {
+    width: 560px;
+    height: 76px;
+    margin-bottom: 44px;
+
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+    font-size: 13px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    color: $title-secondary-cl;
+
+    transition: border-bottom 250ms linear;
+  }
+
+  &__textarea::placeholder {
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    color: rgba(157, 164, 189, 0.4);
+  }
+}
