@@ -1,31 +1,71 @@
 .container-wrap {
   background-color: #191c26;
-
-  background-image: url(../imges/contact-bg.png);
+  background-image: url(../imges/contact-bg-mob.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 50% 100%;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../imges/contact-bg-mob-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../imges/contact-bg-tab.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../imges/contact-bg-tab-2x.png);
+    }
+  }
+
+  @include desktop {
+    background-image: url(../imges/contact-bg.png);
+    background-position: right;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../imges/contact-bg-2x.png);
+    }
+  }
 
   &__containt {
-    display: flex;
+    @include desktop {
+      display: flex;
+    }
   }
 }
 
 .form {
-  width: calc(50% + 15px);
+  padding-top: 84px;
+  padding-bottom: 84px;
 
-  padding-top: 130px;
-  padding-bottom: 130px;
-  padding-right: 40px;
+  @include desktop {
+    width: calc(50% + 15px);
+
+    padding-top: 130px;
+    padding-bottom: 130px;
+    padding-right: 40px;
+  }
 
   &__title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    text-align: center;
     color: #f7f7f7;
 
     margin-bottom: 44px;
   }
 
   &__brim {
-    display: flex;
     margin-bottom: 44px;
+    @include tablet {
+      display: flex;
+    }
   }
 
   &__name {
@@ -33,9 +73,10 @@
   }
 
   &__input {
-    width: 270px;
+    width: 100%;
     height: 24px;
     padding-bottom: 8px;
+    margin-bottom: 44px;
     background-color: transparent;
     border: none;
     outline: none;
@@ -47,10 +88,21 @@
     color: $title-secondary-cl;
 
     transition: border-bottom 250ms linear;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 330px;
+    }
+
+    @include desktop {
+      width: 270px;
+    }
   }
 
   &__input:not(:last-child) {
-    margin-right: 30px;
+    @include tablet {
+      margin-right: 30px;
+    }
   }
 
   &__input:hover,
@@ -81,7 +133,7 @@
   }
 
   &__textarea {
-    width: 560px;
+    width: 100%;
     height: 76px;
     margin-bottom: 44px;
 

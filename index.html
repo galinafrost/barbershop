@@ -25,9 +25,10 @@
     <!-- Хедер -->
     <header class="header">
       <div class="container main-nav">
-        <a class="header__logo" href="">
-          <img src="./imges/logo.png" alt="Логотип" />
-        </a>
+        <svg class="header__logo" width="69" height="55">
+          <use href="./imges/icons.svg#icon-logo"></use>
+        </svg>
+
         <nav>
           <ul class="nav-list">
             <li class="nav-list__item">
@@ -50,6 +51,50 @@
             онлайн-запись
           </button>
         </div>
+        <button class="burger-btn" type="button">
+          <svg class="burger-icon" width="24" height="16">
+            <use href="./imges/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu mob-is-hidden">
+        <button class="mob-btn-close">
+          <svg class="mob-icon-close" width="19" height="19">
+            <use href="./imges/icons.svg#icon-vector"></use>
+          </svg>
+        </button>
+        <ul class="mob-nav-list">
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link" href="">О нас</a>
+          </li>
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link" href="">Услуги и цены</a>
+          </li>
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link" href="">Мастера</a>
+          </li>
+          <li class="mob-nav-list__item">
+            <a class="mob-nav-list__link" href="">Контакты</a>
+          </li>
+        </ul>
+        <div>
+          <a class="mob-header__tel" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="btn mob-header__btn" type="button">
+            онлайн-запись
+          </button>
+        </div>
+        <ul class="mob-social-list">
+          <li class="mob-social-list__item">
+            <a class="mob-social-list__link" href="" target="_blank"
+              >Instagram</a
+            >
+          </li>
+          <li class="mob-social-list__item">
+            <a class="mob-social-list__link" href="" target="_blank">Youtube</a>
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -83,20 +128,44 @@
         <div class="container about-us__content">
           <ul class="about-us__list">
             <li class="about-us__item">
-              <img
-                src="./imges/about-us-1.jpg"
-                alt="Стрижка бороды"
-                width="270px"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imges/about-us-1.jpg    1x,
+                    ./imges/about-us-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/about-us-1-tab.jpg    1x,
+                    ./imges/about-us-1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img src="./imges/about-us-1.jpg" alt="Стрижка бороды" />
+              </picture>
             </li>
             <li class="about-us__item">
-              <img
-                src="./imges/about-us-2.jpg"
-                alt="Мужская стрижка"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./imges/about-us-2.jpg    1x,
+                    ./imges/about-us-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/about-us-2-tab.jpg    1x,
+                    ./imges/about-us-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img src="./imges/about-us-2.jpg" alt="Мужская стрижка" />
+              </picture>
             </li>
           </ul>
           <div class="about-us__meta">
@@ -113,9 +182,9 @@
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="btn about-us__btn" type="button" data-modal-open>
+            <!-- <button class="btn about-us__btn" type="button" data-modal-open>
               онлайн-запись
-            </button>
+            </button> -->
           </div>
         </div>
       </section>
@@ -164,9 +233,9 @@
               </li>
             </ul>
           </div>
-          <button class="btn price__btn" type="button" data-modal-open>
+          <!-- <button class="btn price__btn" type="button" data-modal-open>
             онлайн-запись
-          </button>
+          </button> -->
         </div>
       </section>
       <!-- Секция Skils -->
@@ -211,12 +280,33 @@
           <h2 class="title teams__title">Наши мастера</h2>
           <ul class="teams-list">
             <li class="teams-list__item">
-              <img
-                class="teams-list__img"
-                src="./imges/team-1.jpg"
-                alt="Мужчина парикмахер"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./imges/team-1.jpg 1x, ./imges/team-1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-1-tab.jpg    1x,
+                    ./imges/team-1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-1-mob.jpg    1x,
+                    ./imges/team-1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  class="teams-list__img"
+                  src="./imges/team-1.jpg"
+                  alt="Мужчина парикмахер"
+                />
+              </picture>
+
               <div class="teams-meta">
                 <h3 class="teams-meta__name">John Smith</h3>
                 <p class="teams-meta__position">Extreme Barber</p>
@@ -253,12 +343,33 @@
               </div>
             </li>
             <li class="teams-list__item">
-              <img
-                class="teams-list__img"
-                src="./imges/team-2.jpg"
-                alt="Мужчина парикмахер"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./imges/team-2.jpg 1x, ./imges/team-2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-2-tab.jpg    1x,
+                    ./imges/team-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-2-mob.jpg    1x,
+                    ./imges/team-2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  class="teams-list__img"
+                  src="./imges/team-2.jpg"
+                  alt="Мужчина парикмахер"
+                />
+              </picture>
+
               <div class="teams-meta">
                 <h3 class="teams-meta__name">Michele Doe</h3>
                 <p class="teams-meta__position">Extreme Barber</p>
@@ -295,12 +406,33 @@
               </div>
             </li>
             <li class="teams-list__item">
-              <img
-                class="teams-list__img"
-                src="./imges/team-3.jpg"
-                alt="Мужчина парикмахер"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./imges/team-3.jpg 1x, ./imges/team-3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-3-tab.jpg    1x,
+                    ./imges/team-3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/team-3-mob.jpg    1x,
+                    ./imges/team-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img
+                  class="teams-list__img"
+                  src="./imges/team-3.jpg"
+                  alt="Мужчина парикмахер"
+                />
+              </picture>
+
               <div class="teams-meta">
                 <h3 class="teams-meta__name">Alan Black</h3>
                 <p class="teams-meta__position">Extreme Barber</p>
@@ -347,32 +479,100 @@
           </p>
           <ul class="gallery__list">
             <li class="gallery__item">
-              <img
-                src="./imges/gallery-1.jpg"
-                alt="Мужская стрижка"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./imges/gallery-1.jpg 1x, ./imges/gallery-1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-1-tab.jpg    1x,
+                    ./imges/gallery-1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-1-mob.jpg    1x,
+                    ./imges/gallery-1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img src="./imges/gallery-1.jpg" alt="Мужская стрижка" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./imges/gallery-2.jpg"
-                alt="Мужская стрижка"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./imges/gallery-2.jpg 1x, ./imges/gallery-2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-2-tab.jpg    1x,
+                    ./imges/gallery-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-2-mob.jpg    1x,
+                    ./imges/gallery-2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img src="./imges/gallery-2.jpg" alt="Мужская стрижка" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./imges/gallery-3.jpg"
-                alt="Мужская стрижка"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./imges/gallery-3.jpg 1x, ./imges/gallery-3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-3-tab.jpg    1x,
+                    ./imges/gallery-3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-3-mob.jpg    1x,
+                    ./imges/gallery-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img src="./imges/gallery-3.jpg" alt="Мужская стрижка" />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./imges/gallery-4.jpg"
-                alt="Мужская стрижка"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./imges/gallery-4.jpg 1x, ./imges/gallery-4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-4-tab.jpg    1x,
+                    ./imges/gallery-4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./imges/gallery-4-mob.jpg    1x,
+                    ./imges/gallery-4-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+
+                <img src="./imges/gallery-4.jpg" alt="Мужская стрижка" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -419,36 +619,42 @@
           <!-- Секция Contact -->
           <section class="contact">
             <h2 class="title contact__title">Контакты</h2>
-            <ul class="contact-list">
-              <li class="contact-list__item">
-                <address>
+            <div class="contact__meta">
+              <ul class="contact-list">
+                <li class="contact-list__item">
+                  <address>
+                    <svg class="contact-list__icon" width="24" height="24">
+                      <use href="./imges/icons.svg#icon-map-pin"></use>
+                    </svg>
+                    <a class="contact-list__link" href=""
+                      >ул. Васильковая, 7А Киев, 08132</a
+                    >
+                  </address>
+                </li>
+                <li class="contact-list__item">
                   <svg class="contact-list__icon" width="24" height="24">
-                    <use href="./imges/icons.svg#icon-map-pin"></use>
+                    <use href="./imges/icons.svg#icon-Shape"></use>
                   </svg>
-                  <a class="contact-list__link" href=""
-                    >ул. Васильковая, 7А Киев, 08132</a
+                  <a class="contact-list__link" href="tel:+380441111111"
+                    >+38 044 111 11 11</a
                   >
-                </address>
-              </li>
-              <li class="contact-list__item">
-                <svg class="contact-list__icon" width="24" height="24">
-                  <use href="./imges/icons.svg#icon-Shape"></use>
-                </svg>
-                <a class="contact-list__link" href="tel:+380441111111"
-                  >+38 044 111 11 11</a
-                >
-              </li>
-              <li class="contact-list__item">
-                <svg class="contact-list__icon" width="24" height="24">
-                  <use href="./imges/icons.svg#icon-mail"></use>
-                </svg>
-                <a class="contact-list__link" href="mailto:barbershop@email.com"
-                  >barbershop@email.com</a
-                >
-              </li>
-            </ul>
-            <h3 class="contact__after-text">время работы</h3>
-            <p class="contact__text">Ежедневно с 9:00 до 22:00</p>
+                </li>
+                <li class="contact-list__item">
+                  <svg class="contact-list__icon" width="24" height="24">
+                    <use href="./imges/icons.svg#icon-mail"></use>
+                  </svg>
+                  <a
+                    class="contact-list__link"
+                    href="mailto:barbershop@email.com"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+              <div class="contact__time">
+                <h3 class="contact__after-text">время работы</h3>
+                <p class="contact__text">Ежедневно с 9:00 до 22:00</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -522,5 +728,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

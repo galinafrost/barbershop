@@ -1,33 +1,47 @@
 body {
-    font-family: $main-font;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
+  font-family: $main-font;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 
-    color: $main-txt-cl;
-    background-color: #fff;
+  color: $main-txt-cl;
+  background-color: #fff;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @include mobile {
+    width: 448px;
+  }
+  @include tablet {
+    width: 720px;
+  }
+  @include desktop {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
+  }
 }
 
 ul,
 ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 h1,
@@ -35,77 +49,92 @@ h2,
 h3,
 h4,
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-    display: block;
+  display: block;
+  // max-width: 100%;
+  // height: auto;
+  // width: 100%;
 }
 
 .upper-title {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    font-weight: 600;
-    font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.91;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: $tipical-margin;
+
+  @include tablet {
     line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-
-    margin-bottom: $tipical-margin;
+  }
 }
 
 .upper-title::before {
-    content: "";
-    width: 60px;
-    height: 1px;
-    background-color: #303030;
-    display: inline-block;
-    margin-right: 20px;
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .title {
-    font-family: $secondary-font;
-    font-weight: 700;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: $title-main-cl;
+  margin-bottom: $tipical-margin;
+
+  @include desktop {
     font-size: 42px;
     line-height: 1.16;
-    letter-spacing: 0.05em;
-
-    color: $title-main-cl;
-    margin-bottom: $tipical-margin;
+  }
 }
 
 .after-title {
-    font-weight: 400;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.02em;
+  margin-bottom: $tipical-margin;
+
+  @include desktop {
     font-size: 18px;
     line-height: 1.67;
-    letter-spacing: 0.02em;
-
-    margin-bottom: tipical-margin;
+  }
 }
 
 .btn {
-    min-width: 160px;
-    height: 40px;
+  min-width: 160px;
+  height: 40px;
 
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #ff6c00;
-    border-radius: 25px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
 }
 
 .btn:hover,
 .btn:focus {
-    background-color: $accent-cl;
+  background-color: $accent-cl;
 }
